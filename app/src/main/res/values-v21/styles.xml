@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Ostali atributi stila -->
+        <item name="android:windowBackground">@drawable/background_day</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+    <!-- Specifična tema za Launcher ili SplashScreen -->
+    <style name="AppTheme.Launcher" parent="AppTheme">
+        <!-- Nasleđuje sve od AppTheme i dodaje dodatne prilagodbe specifične za početni ekran -->
+        <!-- Ovde se može postaviti splash_screen.xml kao pozadina -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

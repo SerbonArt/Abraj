@@ -1,0 +1,83 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="33">
+
+        <!-- Zapis za AnalogClockWallpaperService -->
+        <service
+            android:name=".AnalogClockWallpaperService"
+            android:label="Analog Clock Wallpaper"
+            android:permission="android.permission.BIND_WALLPAPER"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/analog_clock_wallpaper" />
+        </service>
+
+        <!-- Zapis za DevedesetDevetActivity sa ispravno konfigurisanom parentActivityName -->
+        <activity android:name=".activity.DevedesetDevetActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".activity.MainActivity"/>
+
+        <!-- Zapis za SplashScreenActivity -->
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Zapis za SettingsActivity -->
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
+
+        <!-- Zapis za MainActivity -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- Ostale aktivnosti bez duplikata za DevedesetDevetActivity -->
+
+        <activity android:name=".activity.QuranActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.KabbaKiblaActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.DuasActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.TasbihActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.IslamicCalendarActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.MosquesActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.DonationsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ClockActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.PrayerTimesActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".AnalogClockWallpaperService" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.FajrSetActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.DhuhrSetActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.AsrSetActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.MaghribSetActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.IshaSetActivity" android:screenOrientation="portrait" />
+
+    </application>
+</manifest>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Abraj</string>
+    <string name="analog_clock_widget_provider">Analog Clock Widget Provider</string>
+    <string name="wallpaper_description">Analog Clock Wallpaper</string>
+    <string name="distance_to_kaaba">Mecca Distance: %1$.2f km</string>
+    <string name="location_label">Current location:</string>
+    <string name="distance_label">Mecca Distance:</string>
+</resources>

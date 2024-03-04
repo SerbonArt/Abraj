@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/activity_toolbar" />
+
+
+    <!-- Pozadinska slika kompasa -->
+    <ImageView
+        android:id="@+id/kabba_kibla_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/kabba_kibla_bg" />
+
+    <!-- Kontejner za strelice kompasa i tekstove -->
+    <RelativeLayout
+        android:id="@+id/kompas_container"
+        android:layout_width="844px"
+        android:layout_height="844px"
+        android:layout_centerInParent="true">
+
+        <!-- Tamna strelica kompasa -->
+        <ImageView
+            android:id="@+id/kabba_kibla_dark"
+            android:layout_width="549px"
+            android:layout_height="820px"
+            android:layout_centerInParent="true"
+            android:src="@drawable/kabba_kibla_dark" />
+
+        <!-- Svetla strelica kompasa -->
+        <ImageView
+            android:id="@+id/kabba_kibla_light"
+            android:layout_width="549px"
+            android:layout_height="820px"
+            android:layout_centerInParent="true"
+            android:src="@drawable/kabba_kibla_light"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- TextView za prikaz naziva lokacije -->
+    <TextView
+        android:id="@+id/location_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kompas_container"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/location_label"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <!-- TextView za prikaz udaljenosti do Kaabe -->
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location_name"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/distance_label"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <!-- Ostali delovi vašeg layout-a -->
+
+</RelativeLayout>
