@@ -10,18 +10,18 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-    </style>
 
     <!-- Specifična tema za Launcher ili SplashScreen -->
     <style name="AppTheme.Launcher" parent="AppTheme">
         <!-- Nasleđuje sve od AppTheme i dodaje dodatne prilagodbe specifične za početni ekran -->
-        <!-- Ovde se može postaviti splash_screen.xml kao pozadina -->
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
@@ -29,9 +29,4 @@
         <item name="android:textSize">18sp</item> <!-- Podesite veličinu teksta po želji -->
         <!-- Dodajte druge atribute teksta ako je potrebno, kao što su boja, font... -->
     </style>
-
-
-
-
 </resources>
-

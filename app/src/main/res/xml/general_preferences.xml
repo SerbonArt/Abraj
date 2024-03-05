@@ -33,7 +33,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.studiobrend.abraj"
-            android:targetClass="com.studiobrend.abraj.activities.AboutActivity" />
+            android:targetClass="com.studiobrend.abraj.activity.AboutActivity" />
     </Preference>
 
 </PreferenceScreen>
