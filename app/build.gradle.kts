@@ -45,7 +45,8 @@ dependencies {
     implementation("androidx.multidex:multidex:2.0.1")
     implementation("com.google.android.gms:play-services-location:21.0.1")
     implementation("com.jakewharton.timber:timber:4.7.1")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:kotlin_version=1.8.20")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
+
 
 
     testImplementation("junit:junit:4.13.2")
