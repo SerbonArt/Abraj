@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Build;
+import androidx.preference.PreferenceManager;
 
 
 import org.arabeyes.prayertime.Method;
@@ -13,7 +14,7 @@ import org.arabeyes.prayertime.Prayer;
 import com.studiobrend.abraj.PrayerTimesApp;
 import com.studiobrend.abraj.R;
 import com.studiobrend.abraj.databases.LocationsDBHelper;
-import com.studiobrend.abraj.City;
+import com.studiobrend.abraj.datamodels.City;
 
 import java.util.Locale;
 

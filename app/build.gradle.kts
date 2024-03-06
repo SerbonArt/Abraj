@@ -43,15 +43,13 @@ dependencies {
     implementation("androidx.multidex:multidex:2.0.1")
     implementation("com.google.android.gms:play-services-location:21.0.1")
     implementation("com.jakewharton.timber:timber:4.7.1")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.20")
+
 
 
 
 
 
     testImplementation("junit:junit:4.13.2")
-    testImplementation("junit:junit:4.13.2")
-
 
 
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

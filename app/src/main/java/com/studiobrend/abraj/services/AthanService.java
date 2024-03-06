@@ -21,7 +21,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 
 import androidx.core.app.NotificationCompat;
-
+import com.studiobrend.abraj.PrayerTimesManager;
 import com.studiobrend.abraj.R;
 import com.studiobrend.abraj.activity.PrayerTimesActivity;
 import com.studiobrend.abraj.helpers.PrayerTimes;
@@ -113,7 +113,7 @@ public class AthanService extends Service implements
 
     private Notification buildNotification() {
         // Use one intent to show MainActivity when notification is touched
-        Intent mainIntent = new Intent(this, MainActivity.class);
+        Intent mainIntent = new Intent(this, PrayerTimesActivity.class);
         PendingIntent notifContentIntent = PendingIntent.getActivity(this, 0, mainIntent, PendingIntent.FLAG_IMMUTABLE);
 
         // Use another intent to stop Athan/close notification via button
@@ -124,7 +124,7 @@ public class AthanService extends Service implements
                 stopIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
         Bitmap largeIconBmp = BitmapFactory.decodeResource(this.getResources(),
-                R.drawable.ic_notif_large);
+                R.drawable.ic_launcher);
         /*Keep this in case we need it
         Resources res = this.getResources();
         int height = (int) res.getDimension(android.R.dimen.notification_large_icon_height);

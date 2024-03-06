@@ -10,7 +10,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.provider.Settings;
-
+import com.studiobrend.abraj.datamodels.City;
 import com.studiobrend.abraj.helpers.PrayerTimes;
 import com.studiobrend.abraj.helpers.UserSettings;
 import com.studiobrend.abraj.services.AthanService;

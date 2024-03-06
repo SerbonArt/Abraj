@@ -7,7 +7,6 @@ import android.os.Build;
 
 import com.studiobrend.abraj.PrayerTimesManager;
 import com.studiobrend.abraj.activity.PrayerTimesActivity;
-import com.studiobrend.abraj.activity.PrayerToTimesActivity;
 import com.studiobrend.abraj.helpers.UserSettings;
 import com.studiobrend.abraj.helpers.WakeLocker;
 import com.studiobrend.abraj.services.AthanService;
@@ -43,7 +42,7 @@ public class AlarmReceiver extends BroadcastReceiver
         }
 
         // Broadcast to MainActivity so it updates its screen if on
-        Intent updateIntent = new Intent(PrayerToTimesActivity.UPDATE_VIEWS);
+        Intent updateIntent = new Intent(PrayerTimesActivity.UPDATE_VIEWS);
         context.sendBroadcast(updateIntent);
 
         // Re-arm alarm.

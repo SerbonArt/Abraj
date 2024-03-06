@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.studiobrend.abraj.PrayerTimesManager;
-import com.studiobrend.abraj.activities.MainActivity;
+import com.studiobrend.abraj.activity.PrayerTimesActivity;
 
 import timber.log.Timber;
 
@@ -25,7 +25,7 @@ public class BootAndTimeChangeReceiver extends BroadcastReceiver {
                 PrayerTimesManager.handleTimeChange(context);
 
                 // Broadcast to MainActivity so it updates its screen if on
-                Intent updateIntent = new Intent(MainActivity.UPDATE_VIEWS);
+                Intent updateIntent = new Intent(PrayerTimesActivity.UPDATE_VIEWS);
                 context.sendBroadcast(updateIntent);
             }
         }
