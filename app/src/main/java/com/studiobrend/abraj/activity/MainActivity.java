@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("AppSettings", MODE_PRIVATE);
 
         if (!areSettingsSet()) {
-            Intent intent = new Intent(this, SettingsActivity.class);
+            Intent intent = new Intent(this, SettingActivity.class);
             startActivity(intent);
             finish();
             return;

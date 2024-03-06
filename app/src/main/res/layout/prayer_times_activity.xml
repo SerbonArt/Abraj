@@ -1,4 +1,6 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -11,6 +13,29 @@
         <include layout="@layout/activity_toolbar" />
 
         <!-- Row 1: Next Prayer Name -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:background="@drawable/rounded_background"
+                android:gravity="center"
+                android:text="Tap here to set location"
+                android:textColor="@color/brown"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <TextView
             android:id="@+id/nextPrayerNameTextView"
             android:layout_width="match_parent"
@@ -130,7 +155,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="4">
+            android:weightSum="4"
+            android:background="@drawable/rounded_background">
             <!-- Temporary Placeholders for Five Prayer Times -->
             <!-- Cells will be added here dynamically or manually as per requirement -->
             <TextView
@@ -162,18 +188,18 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:gravity="right"
-                android:text="Sunset: "
+                android:text="Next Fajr:"
                 android:textColor="@color/brown"
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/sunsetSetTextView"
+                android:id="@+id/textViewNextFajrTime"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:gravity="left"
-                android:text="Sunset"
+                android:text="Next Fajr"
                 android:textColor="@color/brown"
                 android:textSize="14sp" />
 

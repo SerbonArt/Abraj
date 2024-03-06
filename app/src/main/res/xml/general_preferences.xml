@@ -1,35 +1,32 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ListPreference
-        app:key="general_language"
-        app:title="@string/pref_title_language"
-        app:defaultValue="@string/pref_language_default_value"
-        app:entries="@array/pref_language_list_titles"
-        app:entryValues="@array/pref_language_list_values"
-        app:negativeButtonText="@null"
-        app:positiveButtonText="@null"
-        app:useSimpleSummaryProvider="true" />
+        android:key="general_language"
+        android:title="@string/pref_title_language"
+        android:defaultValue="@string/pref_language_default_value"
+        android:entries="@array/pref_language_list_titles"
+        android:entryValues="@array/pref_language_list_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
 
     <ListPreference
-        app:key="general_numerals"
-        app:title="@string/pref_title_numerals"
-        app:defaultValue="@string/pref_numerals_default_value"
-        app:entries="@array/pref_numerals_list_titles"
-        app:entryValues="@array/pref_numerals_list_values"
-        app:negativeButtonText="@null"
-        app:positiveButtonText="@null"
-        app:useSimpleSummaryProvider="true" />
+        android:key="general_numerals"
+        android:title="@string/pref_title_numerals"
+        android:defaultValue="@string/pref_numerals_default_value"
+        android:entries="@array/pref_numerals_list_titles"
+        android:entryValues="@array/pref_numerals_list_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
 
     <SwitchPreference
-        app:key="general_rounding"
-        app:title="@string/pref_title_round"
-        app:defaultValue="true" />
+        android:key="general_rounding"
+        android:title="@string/pref_title_round"
+        android:defaultValue="true" />
 
     <Preference
-        app:key="general_about"
-        app:persistent="false"
-        app:title="@string/pref_title_about">
+        android:key="general_about"
+        android:persistent="false"
+        android:title="@string/pref_title_about">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.studiobrend.abraj"

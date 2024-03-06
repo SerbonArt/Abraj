@@ -1,28 +1,33 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="example_text"
+        android:title="@string/pref_title"
+        android:summary="@string/pref_summary"
+        android:defaultValue="example_default_value" />
+
     <Preference
-        app:key="location_search_city"
-        app:title="@string/pref_title_search_city" >
+        android:key="location_search_city"
+        android:title="@string/pref_title_search_city" >
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.studiobrend.abraj"
-            android:targetClass="com.studiobrend.abraj.activities.SearchCityActivity"/>
+            android:targetClass="com.studiobrend.abraj.activity.SearchCityActivity"/>
     </Preference>
 
     <ListPreference
-        app:key="location_method"
-        app:title="@string/pref_title_method"
-        app:defaultValue="10"
-        app:entries="@array/pref_method_list_titles"
-        app:entryValues="@array/pref_method_list_values"
-        app:negativeButtonText="@null"
-        app:positiveButtonText="@null"
-        app:useSimpleSummaryProvider="true"/>
+        android:key="location_method"
+        android:title="@string/pref_title_method"
+        android:defaultValue="10"
+        android:entries="@array/pref_method_list_titles"
+        android:entryValues="@array/pref_method_list_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"/>
 
     <SwitchPreference
-        app:key="location_mathhab_hanafi"
-        app:title="@string/pref_title_mathhab_hanafi"
-        app:summary="@string/pref_description_mathhab_hanafi"
-        app:defaultValue="false" />
+        android:key="location_mathhab_hanafi"
+        android:title="@string/pref_title_mathhab_hanafi"
+        android:summary="@string/pref_description_mathhab_hanafi"
+        android:defaultValue="false" />
 
 </PreferenceScreen>

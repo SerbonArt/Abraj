@@ -127,6 +127,9 @@
     getString(R.string.app_name)
     <string name="pref_title_round">Rounding seconds</string>
     <string name="title_activity_settings">Athan Settings</string>
+    <string name="pref_title">Naslov Preference</string>
+    <string name="pref_summary">Naslov Summary</string>
+
 
     <string name="channel_name">Athan Bilal channel</string>
     <string name="channel_description">Channel to show Athan Bilal Android notifications</string>
