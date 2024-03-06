@@ -1,27 +1,16 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        val kotlinVersion = "1.8.20"
-        classpath("com.android.tools.build:gradle:8.3.0")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-        // Dodajte ostale potrebne classpath zavisnosti ovde
-    }
-}
+// build.gradle.kts (Root)
 
 plugins {
-    // Možete izostaviti verziju i primenu plugina ovde ako već koristite buildscript blok za konfiguraciju
+    // Definisati plugine na nivou root projekta ako je potrebno.
+    // Na primer: plugin za verzionisanje, plugin za statičku analizu koda itd.
+    // Primetite: Nema potrebe za definisanjem Android ili Kotlin plugin-a ovde.
 }
 
+// Globalne konfiguracije koje se primenjuju na sve module/projekte
 allprojects {
     repositories {
-        google()
-        mavenCentral()
-        // Dodajte ostale repozitorijume ako je potrebno
+        // Svi repozitorijumi su već definisani u settings.gradle.kts kroz dependencyResolutionManagement,
+        // tako da ova sekcija može ostati prazna ili se može ukloniti.
     }
 }
 
