@@ -39,6 +39,10 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.jakewharton.threetenabp:threetenabp:1.3.1")
     implementation("com.google.android.gms:play-services-location:18.0.0")
+    implementation(files("libs/prayer_time_library.jar"))
+    implementation("androidx.preference:preference:1.1.1")
+    implementation ("com.jakewharton.timber:timber:4.7.1")
+
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

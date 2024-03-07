@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyPreferences">
+        <attr name="key" format="string" />
+        <attr name="defaultValue" format="string" />
+        <attr name="dependency" format="string" />
+        <attr name="entryValues" format="reference" />
+        <attr name="entries" format="reference" />
+        <attr name="positiveButtonText" format="string" />
+        <attr name="negativeButtonText" format="string" />
+        <attr name="useSimpleSummaryProvider" format="boolean" />
+    </declare-styleable>
+</resources>
