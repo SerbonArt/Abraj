@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AbrajAlBait</string>
-    <string name="analog_clock_widget_provider">Analog Clock Widget Provider</string>
-    <string name="wallpaper_description">Analog Clock Wallpaper</string>
+    <string name="analog_clock_widget_provider" translatable="false">Analog Clock Widget Provider</string>
+    <string name="wallpaper_description" translatable="false">Analog Clock Wallpaper</string>
     <string name="distance_to_kaaba">Mecca Distance: %1$.2f km</string>
     <string name="location_label">Current location:</string>
     <string name="distance_label">Mecca Distance:</string>
@@ -47,7 +47,7 @@
     </string-array>
     <string name="pref_language_default_value"> </string>
 
-    <string name="pref_title_hindu_nbrs">Istočni arapski brojevi</string>
+    <string name="pref_title_hindu_nbrs">Hindu numbers</string>
     <string name="pref_description_hindu_nbrs">٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩</string>
 
     <string name="pref_title_numerals">Numerals</string>
