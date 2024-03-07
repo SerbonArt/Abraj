@@ -1,19 +1,5 @@
-// build.gradle.kts (Root)
-
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    // Definisati plugine na nivou root projekta ako je potrebno.
-    // Na primer: plugin za verzionisanje, plugin za statičku analizu koda itd.
-    // Primetite: Nema potrebe za definisanjem Android ili Kotlin plugin-a ovde.
+    id("com.android.application") version "8.3.0" apply false
 }
 
-// Globalne konfiguracije koje se primenjuju na sve module/projekte
-allprojects {
-    repositories {
-        // Svi repozitorijumi su već definisani u settings.gradle.kts kroz dependencyResolutionManagement,
-        // tako da ova sekcija može ostati prazna ili se može ukloniti.
-    }
-}
-
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
-}
