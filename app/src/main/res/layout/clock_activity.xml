@@ -14,11 +14,11 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:textSize="25dp"
-        android:text="Privremeni izgled aktivnosti"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="310dp" />
+
 
     <!-- Dodajte ostale UI elemente po potrebi -->
 

@@ -2,8 +2,6 @@
 
     <EditTextPreference
         android:key="example_text"
-        android:title="@string/pref_title"
-        android:summary="@string/pref_summary"
         android:defaultValue="example_default_value" />
 
     <Preference

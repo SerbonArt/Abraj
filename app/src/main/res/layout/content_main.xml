@@ -1,0 +1,521 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_toolbar" />
+
+        <!-- Row 1: Next Prayer Name -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:background="@drawable/rounded_background"
+                android:gravity="center"
+                android:text="Tap here to set location"
+                android:textColor="@color/brown"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/nextPrayerNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="Next prayer"
+            android:textColor="@color/brown"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Row 2: Next Prayer Time -->
+        <TextView
+            android:id="@+id/nextPrayerTimeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="Time"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <!-- Row 3: Countdown to Next Prayer -->
+        <TextView
+            android:id="@+id/countdownTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="Countdown"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Row 4: Slide Show Images -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="1dp">
+            <!-- Temporary Placeholder for Slide Show Images -->
+            <ImageView
+                android:id="@+id/slideshowImageView"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginBottom="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/default_line" />
+
+        </LinearLayout>
+
+        <!-- Row 5: Display of the Five Prayer Times -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <!-- Temporary Placeholders for Five Prayer Times -->
+            <!-- Cells will be added here dynamically or manually as per requirement -->
+            <TextView
+                android:id="@+id/fajrSetTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="Fajr"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/dhuhrSetTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="Dhuhr"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/asrSetTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="Asr"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/maghribSetTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="Maghrib"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/ishaSetTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="Isha"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:background="@drawable/rounded_background">
+            <!-- Temporary Placeholders for Five Prayer Times -->
+            <!-- Cells will be added here dynamically or manually as per requirement -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="right"
+                android:text="Sunrise: "
+                android:textColor="@color/brown"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sunriseSetTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="left"
+                android:text="Sunrise"
+                android:textColor="@color/brown"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="right"
+                android:text="Next Fajr:"
+                android:textColor="@color/brown"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewNextFajrTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="left"
+                android:text="Next Fajr"
+                android:textColor="@color/brown"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="10dp"
+            android:layout_marginTop="10dp">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/rounded_background"
+                android:padding="10dp"
+                android:layout_marginTop="3dp">
+
+                <!-- Image Cell -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Fajr prayer time"
+                    android:src="@drawable/fajr_icon" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:textStyle="bold"
+                    android:text="Fajr"
+                    android:textColor="@color/brown"
+                    android:textSize="20dp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/fajrTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/brown"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/fajr_set_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:gravity="center"
+                    android:text="Set"
+                    android:textColor="@color/brown"
+                    android:textSize="18sp"
+                    android:padding="12dp"
+                    android:onClick="openFajrSetActivity" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:drawableRight="@android:drawable/ic_media_play" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/rounded_background"
+                android:padding="10dp"
+                android:layout_marginTop="3dp">
+
+                <!-- Image Cell -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Dhuhr prayer time"
+                    android:src="@drawable/dhuhr_icon" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:textStyle="bold"
+                    android:text="Dhuhr"
+                    android:textColor="@color/brown"
+                    android:textSize="20dp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/dhuhrTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/brown"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/dhuhr_set_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:gravity="center"
+                    android:text="Set"
+                    android:textColor="@color/brown"
+                    android:textSize="18sp"
+                    android:padding="12dp"
+                    android:onClick="openDhuhrSetActivity" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:drawableRight="@android:drawable/ic_media_play" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/rounded_background"
+                android:padding="10dp"
+                android:layout_marginTop="3dp">
+
+                <!-- Image Cell -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Asr prayer time"
+                    android:src="@drawable/asr_icon" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:textStyle="bold"
+                    android:text="Asr"
+                    android:textColor="@color/brown"
+                    android:textSize="20dp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/asrTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/brown"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/asr_set_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:gravity="center"
+                    android:text="Set"
+                    android:textColor="@color/brown"
+                    android:textSize="18sp"
+                    android:padding="12dp"
+                    android:onClick="openAsrSetActivity" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:drawableRight="@android:drawable/ic_media_play" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/rounded_background"
+                android:padding="10dp">
+
+                <!-- Image Cell -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Maghrib prayer time"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/maghrib_icon" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="Maghrib"
+                    android:textColor="@color/brown"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/maghribTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/brown"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/maghrib_set_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:minHeight="48dp"
+                    android:onClick="openMaghribSetActivity"
+                    android:padding="12dp"
+                    android:text="Set"
+                    android:textColor="@color/brown"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:drawableRight="@android:drawable/ic_media_play"
+                    android:gravity="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/rounded_background"
+                android:padding="10dp"
+                android:layout_marginTop="3dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Isha prayer time"
+                    android:src="@drawable/isha_icon" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:textStyle="bold"
+                    android:text="Isha"
+                    android:textColor="@color/brown"
+                    android:textSize="20dp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/ishaTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/brown"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/isha_set_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:gravity="center"
+                    android:text="Set"
+                    android:textColor="@color/brown"
+                    android:textSize="18sp"
+                    android:padding="12dp"
+                    android:onClick="openIshaSetActivity" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:drawableRight="@android:drawable/ic_media_play" />
+
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

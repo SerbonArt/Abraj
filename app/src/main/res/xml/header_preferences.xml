@@ -1,19 +1,19 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <Preference
-        android:fragment="com.studiobrend.abraj.activities.SettingsActivity$GeneralFragment"
+        android:fragment="com.studiobrend.abraj.activity.SettingsActivity$GeneralFragment"
         android:title="@string/pref_header_general"
         android:key="general_header"
         android:icon="@drawable/ic_info_black_24dp" />
 
     <Preference
-        android:fragment="com.studiobrend.abraj.activities.SettingsActivity$LocationFragment"
+        android:fragment="com.studiobrend.abraj.activity.SettingsActivity$LocationFragment"
         android:title="@string/pref_header_locations"
         android:key="locations_header"
         android:icon="@drawable/ic_locations_black_24dp" />
 
     <Preference
-        android:fragment="com.studiobrend.abraj.activities.SettingsActivity$NotificationsFragment"
+        android:fragment="com.studiobrend.abraj.activity.SettingsActivity$NotificationsFragment"
         android:title="@string/pref_header_notifications"
         android:key="notification_header"
         android:icon="@drawable/ic_notifications_black_24dp" />

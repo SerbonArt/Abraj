@@ -22,7 +22,8 @@ public class AlarmReceiver extends BroadcastReceiver
     public void onReceive(Context context, Intent intent)
     {
         int prayer = intent.getIntExtra(AthanService.EXTRA_PRAYER, 2);
-        Timber.i("=============== Athan alarm is ON: " + prayer);
+        Timber.i("=============== Athan alarm is ON: %d", prayer);
+
 
         if (UserSettings.isNotificationEnabled(context)) {
             WakeLocker.acquire(context);

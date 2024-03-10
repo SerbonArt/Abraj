@@ -13,7 +13,7 @@ public class BootAndTimeChangeReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
-        Timber.i("=============== " + action);
+        Timber.i("=============== %s", action);
 
         if (null != action) {
             if (action.equals(Intent.ACTION_BOOT_COMPLETED))
