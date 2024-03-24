@@ -44,6 +44,7 @@ dependencies {
     implementation("androidx.preference:preference:1.2.1")
     implementation("com.jakewharton.timber:timber:4.7.1")
     implementation("androidx.vectordrawable:vectordrawable:1.1.0")
+    implementation("com.readystatesoftware.systembartint:systembartint:1.0.3")
 
 
 

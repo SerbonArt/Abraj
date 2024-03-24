@@ -18,6 +18,8 @@ public class PrayerTimesApp extends Application {
     // THIS IS A SINGLETON
     private static PrayerTimesApp mContext;
     public static PrayerTimesApp getApplication() { return mContext; }
+    android.content.Context context = getApplicationContext();
+    android.widget.TextView textView = findViewById(R.id.moj_text_view);
 
     private static Locale mLocale;
     public static void setLocale(Locale locale) { mLocale = locale; }
